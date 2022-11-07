@@ -1,0 +1,136 @@
+body {
+    background-image: url('../images/bg1.jpg');
+    /* 背景图垂直、水平均居中 */
+    background-position: center center;
+    /* 背景图不平铺 */
+    background-repeat: no-repeat;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;
+    /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    margin: 0;
+}
+
+/* 滚动条样式 */
+/*定义整个滚动条高宽及背景：高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道：内阴影+圆角*/
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+/*定义滑块：内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #e586e0;
+}
+
+.input-box {
+    width: 150px;
+    margin: 20px auto;
+    color: #fff;
+    border-radius: 2px;
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.play-song {
+    position: absolute;
+    left: -50%;
+    transform: translateX(50%);
+    background-color: #ec0fe1;
+    width: 100%;
+    line-height: 30px;
+}
+
+#loadFile {
+    width: 100%;
+    line-height: 30px;
+    opacity: 0;
+}
+
+#fileList {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 400px;
+    height: 80%;
+    overflow-y: auto;
+    list-style: none;
+    border-radius: 10px;
+}
+
+#fileList li {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    line-height: 40px;
+    padding: 10px 0;
+}
+
+.number {
+    font-size: 16px;
+    color: #fff;
+    float: left;
+    width: 30px;
+    text-align: left;
+}
+
+.song {
+    color: #fff;
+    float: left;
+    /* 单行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.active {
+    color: #ec0fe1;
+}
+
+/* 盒子区域 */
+.visual {
+    display: none;
+}
+
+.visual .el {
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    left: 500px;
+    -webkit-transform-origin: 0% 0%;
+}
+
+#stop,
+#continue {
+    display: none;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.isplay {
+    background-image: url("../images/zanting.png");
+}
+
+.isstop {
+    background-image: url("../images/bofang.png");
+}
